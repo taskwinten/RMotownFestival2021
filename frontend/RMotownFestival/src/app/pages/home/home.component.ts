@@ -11,7 +11,6 @@ import { Schedule, ScheduleItem } from 'src/app/api/models/schedule.model';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  festivalName = environment.festivalName;
 
   artists$: Observable<Artist[]>;
 

@@ -5,15 +5,18 @@ namespace RMotownFestival.Api.Domain
 {
     public class Festival
     {
+        public int Id { get; set; }
+
         public Schedule LineUp { get; set; }
-        public IEnumerable<Artist> Artists { get; set; }
-        public IEnumerable<Stage> Stages { get; set; }
+
+        public ICollection<Artist> Artists { get; set; }
+
+        public ICollection<Stage> Stages { get; set; }
 
         public Festival()
         {
-            LineUp = new Schedule();
-            Artists = Enumerable.Empty<Artist>();
-            Stages = Enumerable.Empty<Stage>();
+            Artists = new List<Artist>();
+            Stages = new List<Stage>();
         }
     }
 }

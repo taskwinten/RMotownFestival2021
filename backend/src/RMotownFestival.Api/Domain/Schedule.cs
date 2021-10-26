@@ -1,10 +1,17 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace RMotownFestival.Api.Domain
 {
     public class Schedule
     {
-        public List<ScheduleItem> Items { get; set; }
+        public int Id { get; set; }
+
+        public int FestivalId { get; set; }
+        [JsonIgnore]
+        public Festival Festival { get; set; }
+
+        public ICollection<ScheduleItem> Items { get; set; }
 
         public Schedule()
         {

@@ -8,4 +8,6 @@ import { environment } from 'src/environments/environment';
 export class FooterComponent {
 
   festivalName = environment.festivalName;
+  year: number = new Date().getFullYear();
+
 }

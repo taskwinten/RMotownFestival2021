@@ -23,7 +23,7 @@ export class UploadComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next();
+    this.destroy$.next(true);
   }
 
   onFileChange(event: InputEvent): void {
